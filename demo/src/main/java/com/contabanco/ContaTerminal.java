@@ -4,14 +4,38 @@ import java.util.Scanner;
 
 public class ContaTerminal {
     public static void main(String[] args) {
-        // TODO: "Conhecer e importar a classe scanner"
+        // Criando o objeto Scanner para leitura dos dados do usuário
         Scanner scanner = new Scanner(System.in);
 
-        // TODO: "Exibir as mensagem do usuario"
+        // Primeira simulação
+        System.out.println("=== Primeira Simulação ===");
+        System.out.print("Digite o saldo inicial: ");
+        double saldo = scanner.nextDouble();
+        System.out.print("Digite o valor solicitado para saque: ");
+        double valorSolicitado = scanner.nextDouble();
 
-        // TODO: "Obter pela classe scanner os valores"
+        if (saldo >= valorSolicitado) {
+            saldo = saldo - valorSolicitado;
+            // Exibe o saldo formatado com duas casas decimais
+            System.out.println("Saque realizado com sucesso. Saldo atual: " + String.format("%.2f", saldo));
+        } else {
+            System.out.println("Saldo insuficiente.");
+        }
 
-        // TODO: "Formatar a mensagem final"
+        // Segunda simulação
+        System.out.println("\n=== Segunda Simulação ===");
+        System.out.print("Digite o saldo inicial: ");
+        saldo = scanner.nextDouble();
+        System.out.print("Digite o valor solicitado para saque: ");
+        valorSolicitado = scanner.nextDouble();
+
+        if (saldo >= valorSolicitado) {
+            saldo = saldo - valorSolicitado;
+            // Exibe o saldo formatado com duas casas decimais
+            System.out.println("Saque realizado com sucesso. Saldo atual: " + String.format("%.2f", saldo));
+        } else {
+            System.out.println("Saldo insuficiente.");
+        }
 
         // Fechando o scanner
         scanner.close();
